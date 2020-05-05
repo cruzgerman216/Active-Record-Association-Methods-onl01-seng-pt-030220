@@ -20,5 +20,5 @@ class Song < ActiveRecord::Base
      self.artist = getdrake
    end
   end
-  
+
 end
