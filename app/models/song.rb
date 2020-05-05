@@ -12,8 +12,9 @@ class Song < ActiveRecord::Base
     # Hint: you won't want to create an artist record every time this method is called, only if an Drake is *not found*
     getdrake = Artist.find_by(name: "drake")
     if getdrake == nil
-     drake = Artist.new(name: "Drake").save
-     self.artist = drake.name
+     drake = Artist.new(name: "Drake")
+     drake.save
+     self.artist = drake
    else
      binding.pry
      self.artist = getdrake
