@@ -16,7 +16,6 @@ class Song < ActiveRecord::Base
      drake.save
      self.artist = drake
    else
-     binding.pry
      self.artist = getdrake
    end
   end
